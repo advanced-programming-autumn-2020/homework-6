@@ -25,8 +25,7 @@ while (processed[v] == false) {
       }
       p = p->next;
     }
-    // find new min                                                             
-    /* naive next next vertex loop */
+    /* find new min: naive approach, replace with min-heap priority queue */
     for (i=1,v=1,dist=INT_MAX; i<=g->nvertices; i++) {
       if ((processed[i] == false) && (dist > distance[i])) {
         dist = distance[i];
