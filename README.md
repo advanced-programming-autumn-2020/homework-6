@@ -12,7 +12,7 @@ In addition to devising and running your own correctness tests, carry out a perf
 
 *An excellent reference for building a min-heap priority queue can be found here:<br/> https://bradfieldcs.com/algos/trees/priority-queues-with-binary-heaps/ <br/><br/>
 
-
+*Dijkstra Shortest Path Main Loop*
 ```
 while (processed[v] == false) {
     processed[v] = true;
@@ -26,7 +26,7 @@ while (processed[v] == false) {
       p = p->next;
     }
     // find new min                                                             
-    /* note: this loop is O(n) because of array, can do better */
+    /* naive next next vertex loop */
     for (i=1,v=1,dist=INT_MAX; i<=g->nvertices; i++) {
       if ((processed[i] == false) && (dist > distance[i])) {
         dist = distance[i];
